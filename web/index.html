@@ -51,10 +51,35 @@
 						<div class="card-body">
 							<h5 class="card-title">Compañía</h5>
 							<p class="card-text fs-6">Configura la compañía de la Orden de Compra</p>
-
-							
-
-
+							<form>
+								<div class="row">
+									<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+										<div class="mb-2 row">
+											<label for="compania" class="col-sm-3 col-form-label">Compañía</label>
+											<div class="col-sm-8">
+												<div class="input-group">
+													<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Tipo de documento" name="compania" id="compania">
+														<option value="0">Inmobite GyG</option>
+														<option value="6">YuanLu</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="mb-2 row">
+											<label for="customer-name" class="col-sm-3 col-form-label">RUC</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" aria-label="Razón Social del cliente" aria-describedby="razonadorSocial" id="customer-name" name="customer-name" placeholder="Nombre o razón social" autocomplete="off" disabled>
+											</div>
+										</div>
+										<div class="mb-2 row">
+											<label for="direccionCliente" class="col-sm-3 col-form-label">Dirección principal</label>
+											<div class="col-sm-8">
+												<input type="text" class="form-control" aria-label="Dirección de la compañía" aria-describedby="direccionadorCliente" id="customer-address" name="customer-address"   ="Dirección opcional" autocomplete="off" disabled>
+											</div>
+										</div>
+									</div>
+								</div>	
+							</form>							
 						</div>
 						<div class="card-footer">
 							<small class="text-muted"><a href="">Ver todas las compañías registradas</a></small>
