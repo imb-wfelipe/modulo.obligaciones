@@ -411,7 +411,7 @@
 									<div class="row mb-2">
 										<label for="condes" class="col-sm-3 col-form-label">Descripción completa</label>
 										<div class="col-sm-9">
-											<textarea rows="2" class="form-control" aria-label="Descripción de la empresa" aria-describedby="condes" id="condes" name="condes"   placeholder="Descripción del concepto" autocomplete="off">PRODUCTO DE MANUFACTURA X REL V332</textarea>
+											<textarea rows="2" class="form-control" aria-label="Descripción de la empresa" disabled aria-describedby="condes" id="condes" name="condes"   placeholder="Descripción del concepto" autocomplete="off">PRODUCTO DE MANUFACTURA X REL V332</textarea>
 										</div>
 									</div>
 									
@@ -421,9 +421,9 @@
 												<label for="proveedor" class="col-sm-3 col-form-label">Unidad de medida <span class="text-danger fw-bold">*</span></label>
 												<div class="col-sm-9">
 													<div class="input-group">
-														<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor">
+														<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor" disabled>
 															<option value="1">--</option>
-															<option value="2">UNIDAD</option>
+															<option value="2" selected>UNIDAD</option>
 															<option value="3">CAJA</option>
 														</select>
 													</div>
@@ -449,6 +449,77 @@
 								</div>
 								<div class="card-footer">
 								<small class="text-muted"><a href="">Guíate aquí</a></small></small>
+								</div>
+							</div>
+						</div>
+						
+						<div class="col-xl-2 mb-4">
+							<div class="row">
+								<div class="card h-100 w-100">
+									<i class="fa-solid fa-circle-info card-img-top m-1" alt="Datos de la Orden de Compra"></i>
+									<div class="card-body">
+										<h5 class="card-title">Abono</h5>
+										<p class="card-text">Configura el Concepto de la Orden</p>
+	
+										<div class="row">
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="concod" class="col-sm-3 col-form-label">Codigo <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-9">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="concod" name="concod" id="concod">
+																<option value="1">C0001 - PRODUCTO DE MANUFACTURA X</option>
+																<option value="2">C0002 - PRODUCTO DE MANUFACTURA Y</option>
+																<option value="3">C0002 - PRODUCTO DE MANUFACTURA Z</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+	
+										<div class="row mb-2">
+											<label for="condes" class="col-sm-3 col-form-label">Descripción completa</label>
+											<div class="col-sm-9">
+												<textarea rows="2" class="form-control" aria-label="Descripción de la empresa" disabled aria-describedby="condes" id="condes" name="condes"   placeholder="Descripción del concepto" autocomplete="off">PRODUCTO DE MANUFACTURA X REL V332</textarea>
+											</div>
+										</div>
+										
+										<div class="row">
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="proveedor" class="col-sm-3 col-form-label">Unidad de medida <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-9">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor" disabled>
+																<option value="1">--</option>
+																<option value="2" selected>UNIDAD</option>
+																<option value="3">CAJA</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+	
+										<div class="row mb-2">
+											<label for="cantidad" class="col-sm-3 col-form-label">Cantidad</label>
+											<div class="col-sm-9">
+												<input type="number" value="0" class="form-control" id="cantidad" name="cantidad" autocomplete="off">
+											</div>
+										</div>
+	
+										<div class="row mb-2">
+											<label for="precio" class="col-sm-3 col-form-label">Precio de compra</label>
+											<div class="col-sm-9">
+												<input type="number" value="0.00" class="form-control" id="precio" name="precio" autocomplete="off">
+											</div>
+										</div>
+	
+									</div>
+									<div class="card-footer">
+									<small class="text-muted"><a href="">Guíate aquí</a></small></small>
+									</div>
 								</div>
 							</div>
 						</div>
