@@ -11,6 +11,9 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 		<link href="main.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/689e7178c3.js" crossorigin="anonymous"></script>
+		<script src="main.js"></script>
+		
+
 	</head>
 	<body>
 		<main class="container-fluid">
@@ -42,78 +45,416 @@
 					</div>
 				</nav>
 			</div>
-			
-			<div class="row mt-3">
-				<div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-					<div class="col">
-					<div class="card h-100">
-						<i class="fa-solid fa-building card-img-top m-1" alt="Edición de la compañía para la orden de compra"></i>
-						<div class="card-body">
-							<h5 class="card-title">Compañía</h5>
-							<p class="card-text fs-6">Configura la compañía de la Orden de Compra</p>
-							<form>
-								<div class="row">
-									<div class="col-xl-12 col-lg-12 align-self-start mt-1">
-										<div class="mb-2 row">
-											<label for="compania" class="col-sm-3 col-form-label">Compañía</label>
-											<div class="col-sm-8">
-												<div class="input-group">
-													<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Tipo de documento" name="compania" id="compania">
-														<option value="0">Inmobite GyG</option>
-														<option value="6">YuanLu</option>
-													</select>
+			<form>
+				<div class="row mt-3">
+					<div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+						<div class="col-xl-5">
+							<div class="card h-100 w-100 mt-2">
+								<i class="fa-solid fa-building card-img-top m-1" alt="Edición de la compañía para la orden de compra"></i>
+								<div class="card-body">
+									<h5 class="card-title">Compañía y Proyecto</h5>
+									<p class="card-text">Configura la compañía y el proyecto de la Orden</p>
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="compania" class="col-sm-3 col-form-label">Razón Social <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-9">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Compañía" name="compania" id="compania">
+																	<option value="1">INNOVACIONES TECNOLOGICAS G Y G S.A.C. </option>
+																	<option value="2">YUAN LU CONSTRUCTORES S.A.C.</option>
+																	<option value="3">LEON BEACH</option>
+																	<option value="4">PRADERAS</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="compania-ruc" class="col-sm-3 col-form-label">RUC <span class="text-danger fw-bold">*</span></label>
+												<div class="col-sm-9">
+													<input type="text" value="20607235741" class="form-control" aria-label="RUC de la compañía" aria-describedby="compania-ruc" id="compania-ruc" name="compania-ruc" placeholder="RUC" autocomplete="off" disabled>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="compania-direc" class="col-sm-3 col-form-label">Dirección principal</label>
+												<div class="col-sm-9">
+													<input type="text" value="Calle Chinchón 910 - San Isidro"class="form-control" aria-label="Dirección de la compañía" aria-describedby="direccionadorCompania" id="compania-direc" name="compania-direc"   placeholder="Dirección principal" autocomplete="off" disabled>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="comptel1" class="col-sm-3 col-form-label">Telefono principal</label>
+												<div class="col-sm-9">
+													<input type="text" value="+51 915092369"class="form-control" aria-label="Dirección de la compañía" id="comptel1" name="comptel1"   placeholder="Telefono principal" autocomplete="off" disabled>
+												</div>
+											</div>
+											<div class="row">
+												<div class="mb-2">
+													<div class="row">
+														<label for="proyecto" class="col-sm-3 col-form-label">Proyecto</label>
+														<div class="col-sm-9">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Proyecto" name="proyecto" id="proyecto">
+																	<option value="0">--</option>
+																	<option value="1">LOS SAUCES</option>
+																	<option value="2">LAS GARDENIAS</option>
+																	<option value="3">LAS FLORES</option>
+																</select>
+															</div>
+														</div>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="mb-2 row">
-											<label for="customer-name" class="col-sm-3 col-form-label">RUC</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" aria-label="Razón Social del cliente" aria-describedby="razonadorSocial" id="customer-name" name="customer-name" placeholder="Nombre o razón social" autocomplete="off" disabled>
+									</div>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted"><a href="">Agregar compañía</a></small>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3">
+							<div class="card h-100 w-100 mt-2">
+								<i class="fa-solid fa-file-invoice card-img-top m-1" alt="Datos de la Orden de Compra"></i>
+								<div class="card-body">
+									<h5 class="card-title">Datos</h5>
+									<p class="card-text">Datos generales de la Orden</p>
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="tipo" class="col-sm-5 col-form-label">Tipo <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-7">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Tipo" name="tipo" id="tipo">
+																	<option value="1">ORDEN DE COMPRA</option>
+																	<option value="2">ORDEN DE SERVICIO</option>
+																	<option value="3">ORDEN DE REQUERIMIENTO</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
 											</div>
-										</div>
-										<div class="mb-2 row">
-											<label for="direccionCliente" class="col-sm-3 col-form-label">Dirección principal</label>
-											<div class="col-sm-8">
-												<input type="text" class="form-control" aria-label="Dirección de la compañía" aria-describedby="direccionadorCliente" id="customer-address" name="customer-address"   ="Dirección opcional" autocomplete="off" disabled>
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="numero" class="col-sm-5 col-form-label">Número <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-7">
+															<input type="text" value="0000125" class="form-control" aria-label="Número de la Orden" aria-describedby="numero" id="numero" name="numero" placeholder="Número de la Orden" autocomplete="off">
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>	
-							</form>							
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="moneda" class="col-sm-5 col-form-label">Moneda <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-7 ml-2">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Moneda" name="moneda" id="moneda">
+																<option value="1">SOLES (S/)</option>
+																<option value="2">DÓLARES ($)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="pago" class="col-sm-5 col-form-label">Condición de Pago <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-7 ml-2">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Pago" name="pago" id="pago">
+																<option value="1">CONTADO</option>
+																<option value="2">CRÉDITO</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+									
+									<!--
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="fecultmod" class="col-sm-5 col-form-label">Fecha de última modificación</label>
+														<div class="col-sm-4">
+															<input type="datetime-local" class="form-control" aria-label="Fecha de creación de la Orden" aria-describedby="fecultmod" id="fecultmod" name="fecultmod">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									-->
+								</div>
+								<div class="card-footer">
+								<small class="text-muted"><a href="">Guíate aquí</a></small></small>
+								</div>
+							</div>
 						</div>
-						<div class="card-footer">
-							<small class="text-muted"><a href="">Ver todas las compañías registradas</a></small>
+						<div class="col-xl-4">
+							<div class="card h-70 w-100 mt-2">
+								<i class="fa-solid fa-list-check card-img-top m-1" alt="Datos de la Orden de Compra"></i>
+								<div class="card-body">
+									<h5 class="card-title">Estado</h5>
+									<p class="card-text">Seguimiento de la Orden</p>
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="estado" class="col-sm-5 col-form-label">Estado <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-7">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Estado" name="estado" id="estado">
+																	<option value="1">INICIADA</option>
+																	<option value="2">CREADA</option>
+																	<option value="3">PENDIENTE DE PAGO</option>
+																	<option value="4">PAGADA</option>
+																	<option value="4">ANULADA</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+													<div class="row">
+														<div class="mb-2 col-lg-12">
+															<div class="row">
+																<label for="fecemision" class="col-sm-5 col-form-label">Fecha de emisión <span class="text-danger fw-bold">*</span></label>
+																<div class="col-sm-7">
+																	<input type="date" class="form-control" aria-label="Fecha de emisión de la Orden" aria-describedby="fecemision" id="fecemision" name="fecemision">
+																</div>	
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+													<div class="row">
+														<div class="mb-2 col-lg-12">
+															<div class="row">
+																<label for="fecprogpago" class="col-sm-5 col-form-label">Fecha programada de pago <span class="text-danger fw-bold">*</span></label>
+																<div class="col-sm-7">
+																	<input type="date" class="form-control" aria-label="Fecha programada de pago de la Orden" aria-describedby="fecprogpago" id="fecprogpago" name="fecprogpago">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+													<div class="row">
+														<div class="mb-2 col-lg-12">
+															<div class="row">
+																<label for="fecvenc" class="col-sm-5 col-form-label">Fecha de vencimiento</label>
+																<div class="col-sm-7">
+																	<input type="date" class="form-control" aria-label="Fecha de vencimiento" aria-describedby="fecvenc" id="fecvenc" name="fecvenc">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+													<div class="row">
+														<div class="mb-2 col-lg-12">
+															<div class="row">
+																<label for="fecanul" class="col-sm-5 col-form-label">Fecha de anulación</label>
+																<div class="col-sm-7">
+																	<input type="date" class="form-control" aria-label="Fecha de vencimiento" aria-describedby="fecanul" id="fecanul" name="fecanul">
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+								<small class="text-muted"><a href="">Seguimiento de estados</a></small></small>
+								</div>
+							</div>
 						</div>
 					</div>
-					</div>
-					<div class="col">
-					<div class="card h-100">
-						<img src="..." class="card-img-top" alt="...">
-						<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+
+					<div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
+						<div class="col-xl-5 mb-4">
+							<div class="card h-100 w-100">
+								<i class="fa-solid fa-truck-field card-img-top m-1" alt="Edición de la compañía para la orden de compra"></i>
+								<div class="card-body">
+									<h5 class="card-title">Proveedor</h5>
+									<p class="card-text">Configura el proveedor de la Orden</p>
+									<div class="row">
+										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="proveedor" class="col-sm-3 col-form-label">Razón Social <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-9">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor">
+																	<option value="1">SICOIN PERU S.A.C.</option>
+																	<option value="2">SICOIN PERU S.A.C. </option>
+																	<option value="3">CONCRETOS Y MATERIALES CAÑETE E.I.R.L.</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="provruc" class="col-sm-3 col-form-label">RUC <span class="text-danger fw-bold">*</span></label>
+												<div class="col-sm-9">
+													<input type="text" value="20331898008 " class="form-control" aria-label="RUC de la compañía" aria-describedby="provruc" id="provruc" name="provruc" placeholder="RUC" autocomplete="off" disabled>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="compania-direc" class="col-sm-3 col-form-label">Dirección principal</label>
+												<div class="col-sm-9">
+													<input type="text" value="Av. Canaval y Moreyra 380"class="form-control" aria-label="Dirección de la compañía" aria-describedby="direccionadorCompania" id="compania-direc" name="compania-direc"   placeholder="Dirección principal" autocomplete="off" disabled>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="comptel1" class="col-sm-3 col-form-label">Telefono principal</label>
+												<div class="col-sm-9">
+													<input type="text" value="+51 915092369"class="form-control" aria-label="Dirección de la compañía" id="comptel1" name="comptel1"   placeholder="Telefono principal" autocomplete="off" disabled>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="contcom" class="col-sm-3 col-form-label">Contacto comercial</label>
+												<div class="col-sm-9">
+													<input type="text" value="Pablo Julian Hernandez Hernandez" class="form-control" aria-label="Dirección de la compañía" id="contcom" name="contcom"   placeholder="Dirección principal" autocomplete="off">
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="cuentapri" class="col-sm-3 col-form-label">Cuenta Bancaria</label>
+												<div class="col-sm-5">
+													<input type="text" value="0011 0130 0201068964" class="form-control" aria-label="Cuenta principal " id="cuentapri" name="cuentapri"   placeholder="Cuenta principal" autocomplete="off">
+												</div>
+												<div class="col-sm-4">
+													<div class="input-group">
+														<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="bancopri" name="bancopri" id="bancopri">
+															<option value="1">BBVA</option>
+															<option value="2">BCP</option>
+															<option value="3">INTERBANK</option>
+															<option value="3">SCOTIABANK</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<label for="cuentadet" class="col-sm-3 col-form-label">Cuenta Detracciones</label>
+												<div class="col-sm-5">
+													<input type="text" value="0011 0130 0201068964" class="form-control" aria-label="Cuenta detracciones" id="cuentadet" name="cuentadet"   placeholder="Cuenta detracciones" autocomplete="off">
+												</div>
+												<div class="col-sm-4">
+													<div class="input-group">
+														<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="bancodet" name="bancodet" id="bancodet">
+															<option value="1">BN</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer">
+									<small class="text-muted"><a href="">Agregar proveedor</a></small>
+								</div>
+							</div>
 						</div>
-						<div class="card-footer">
-						<small class="text-muted">Last updated 3 mins ago</small>
+						<div class="col-xl-5 mb-4">
+							<div class="card h-100 w-100">
+								<i class="fa-solid fa-circle-info card-img-top m-1" alt="Datos de la Orden de Compra"></i>
+								<div class="card-body">
+									<h5 class="card-title">Concepto</h5>
+									<p class="card-text">Configura el Concepto de la Orden</p>
+
+									<div class="row">
+										<div class="mb-2 col-lg-12">
+											<div class="row">
+												<label for="concod" class="col-sm-3 col-form-label">Codigo <span class="text-danger fw-bold">*</span></label>
+												<div class="col-sm-9">
+													<div class="input-group">
+														<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="concod" name="concod" id="concod">
+															<option value="1">C0001 - PRODUCTO DE MANUFACTURA X</option>
+															<option value="2">C0002 - PRODUCTO DE MANUFACTURA Y</option>
+															<option value="3">C0002 - PRODUCTO DE MANUFACTURA Z</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-2">
+										<label for="condes" class="col-sm-3 col-form-label">Descripción completa</label>
+										<div class="col-sm-9">
+											<textarea rows="2" class="form-control" aria-label="Descripción de la empresa" aria-describedby="condes" id="condes" name="condes"   placeholder="Descripción del concepto" autocomplete="off">PRODUCTO DE MANUFACTURA X REL V332</textarea>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="mb-2 col-lg-12">
+											<div class="row">
+												<label for="proveedor" class="col-sm-3 col-form-label">Unidad de medida <span class="text-danger fw-bold">*</span></label>
+												<div class="col-sm-9">
+													<div class="input-group">
+														<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor">
+															<option value="1">--</option>
+															<option value="2">UNIDAD</option>
+															<option value="3">CAJA</option>
+														</select>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="row mb-2">
+										<label for="cantidad" class="col-sm-3 col-form-label">Cantidad</label>
+										<div class="col-sm-9">
+											<input type="number" value="0" class="form-control" id="cantidad" name="cantidad" autocomplete="off">
+										</div>
+									</div>
+
+									<div class="row mb-2">
+										<label for="precio" class="col-sm-3 col-form-label">Precio de compra</label>
+										<div class="col-sm-9">
+											<input type="number" value="0.00" class="form-control" id="precio" name="precio" autocomplete="off">
+										</div>
+									</div>
+
+								</div>
+								<div class="card-footer">
+								<small class="text-muted"><a href="">Guíate aquí</a></small></small>
+								</div>
+							</div>
 						</div>
-					</div>
-					</div>
-					<div class="col">
-					<div class="card h-100">
-						<img src="..." class="card-img-top" alt="...">
-						<div class="card-body">
-						<h5 class="card-title">Card title</h5>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-						</div>
-						<div class="card-footer">
-						<small class="text-muted">Last updated 3 mins ago</small>
-						</div>
-					</div>
 					</div>
 				</div>
-			  </div>
-		
-
+			</form>
         </main>
 
 		<!-- JavaScript Bundle with Popper -->
