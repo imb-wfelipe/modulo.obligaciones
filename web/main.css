@@ -1,3 +1,17 @@
 .flex-grow-imb {
-    flex-grow:  !important
+    flex-grow: 0 !important
+}
+.input-group{
+    width: initial !important;
+}
+.bg-gradient{
+    background-color: #edfcf1 !important;
+}
+
+.bg-success{
+    background-color: #f0f8fa !important;
+}
+
+.imb-bg-navbar{
+    background-color: #082113 !important;
 }
