@@ -1,3 +1,6 @@
+*{
+    font-size: 0.985em !important;
+}
 .flex-grow-imb {
     flex-grow: 0 !important
 }

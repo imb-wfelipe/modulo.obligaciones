@@ -44,47 +44,63 @@
 					</div>
 				</nav>
 			</div>
-			<form>
+			
+            <form>
 				<div class="row mt-3">
 					<div class="row row-cols-1 row-cols-md-1 g-4 mt-5">
-						<!-- Compañía y Proyecto-->
+						<!-- Flitros-->
 						<div class="col-xl-12">
 							<div class="card h-100 w-100">
 								<i class="fa-solid fa-building card-img-top m-1" alt="Edición de la compañía para la orden de compra"></i>
 								<div class="card-body">
-									<h5 class="card-title">Compañía y Proyecto</h5>
-									<p class="card-text">Configura la compañía y el proyecto de la Orden</p>
-									<div class="row">
-										<div class="col-xl-12 col-lg-12 align-self-start mt-1">
-											<div class="row">
-												<div class="mb-2 col-lg-12">
-													<div class="row">
-														<label for="compania" class="col-sm-3 col-form-label">Razón Social <span class="text-danger fw-bold">*</span></label>
-														<div class="col-sm-9">
-															<div class="input-group">
-																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Compañía" name="compania" id="compania">
-																	<option value="1">INNOVACIONES TECNOLOGICAS G Y G S.A.C. </option>
-																	<option value="2">YUAN LU CONSTRUCTORES S.A.C.</option>
-																	<option value="3">LEON BEACH</option>
-																	<option value="4">PRADERAS</option>
-																</select>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="card-footer bg-success">
-									<small class="text-muted"><a href="">Agregar compañía</a></small>
+									<h5 class="card-title">Filtros</h5>
+									<p class="card-text">Configura los filtros para un reporte más personalizado</p>
+									
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <div class="form-floating">
+                                                <select class="form-select text-truncate" id="compania" aria-label="Compañía" name="type-code">
+                                                    <option value="1" selected>INNOVACIONES TECNOLOGICAS G Y G S.A.C. </option>
+                                                    <option value="2">YUAN LU CONSTRUCTORES S.A.C.</option>
+                                                    <option value="3">LEON BEACH</option>
+                                                    <option value="4">PRADERAS</option>
+                                                </select>
+                                                <label class="col-form-label fw-bold" for="tipo">Compañia</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3">
+                                            <div class="form-floating">
+                                                <select class="form-select text-truncate" id="proyecto" aria-label="Proyecto" name="type-code">
+                                                    <option value="0">--</option>
+                                                    <option value="1">LOS SAUCES</option>
+                                                    <option value="2">LAS GARDENIAS</option>
+                                                    <option value="3">LAS FLORES</option>
+                                                </select>
+                                                <label class="col-form-label fw-bold" for="tipo">Proyecto</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3">
+                                            <div class="form-floating">
+                                                <select class="form-select text-truncate" id="proveedor" aria-label="Proveedor" name="type-code">
+                                                    <option value="1">SICOIN PERU S.A.C.</option>
+                                                    <option value="2">SICOIN PERU S.A.C. </option>
+                                                    <option value="3">CONCRETOS Y MATERIALES CAÑETE E.I.R.L.</option>
+                                                </select>
+                                                <label class="col-form-label fw-bold" for="tipo">Proveedor</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</form>
+            
         </main>
 
 		<!-- JavaScript Bundle with Popper -->
