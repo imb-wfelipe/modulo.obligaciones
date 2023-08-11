@@ -46,7 +46,7 @@
 			</div>
 			<form>
 				<div class="row mt-3">
-					<div class="row row-cols-1 row-cols-md-2 g-4 mt-5">
+					<div class="row row-cols-1 row-cols-md-2 g-4 mt-5 mb-4">
 						
 						<!-- Compañía y Proyecto-->
 							<div class="col-xl-7">
@@ -137,7 +137,7 @@
 
 							<!-- Proveedor-->
 								<div class="col-xl-12">
-									<div class="card h-100 w-100 mt-2">
+									<div class="card h-100 w-100 mt-4">
 										<i class="fa-solid fa-truck-field card-img-top m-1" alt="Edición de la compañía para la orden de compra"></i>
 										<div class="card-body">
 											<h5 class="card-title">Proveedor</h5>
@@ -206,7 +206,7 @@
 														<div class="col-sm-9">
 															<div class="input-group">
 																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="bancopri" name="bancopri" id="bancopri">
-																	<option value="1" selected>SCOTIABANK SOLES - CUENTA DESTINO PRINCIPAL</option>
+																	<option value="1" selected>CUENTA CTE. BBVA SOLES - CUENTA DESTINO PRINCIPAL</option>
 																	<option value="2" >SCOTIABANK DÓLARES</option>
 																	<option value="3" >BBVA SOLES</option>
 																	<option value="4" >BBVA DÓLARES</option>
@@ -228,7 +228,7 @@
 													
 													<hr>
 													</hr>
-													<span class="text-muted fst-italic">Detracciones</span>
+													<span class="text-muted fst-italic"><i class="fa-solid fa-building-columns"></i>&nbsp;&nbsp;Detracciones</span>
 
 													<div class="row mb-2">
 														<label for="cuentadet" class="col-sm-3 col-form-label mt-1">Aplica detracción</label>
@@ -279,11 +279,117 @@
 									</div>
 								</div>
 
+								<!-- Concepto-->
+								<div class="col-xl-12">
+									<div class="card h-100 w-100 mt-4">
+										<i class="fa-solid fa-circle-info card-img-top m-1" alt="Datos de la Orden de Compra"></i>
+										<div class="card-body">
+											<h5 class="card-title">Concepto</h5>
+											<p class="card-text">Configura el Concepto de la Orden</p>
+
+											<!-- 
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row form-group">
+														<label for="connom" class="col-sm-3 col-form-label">Nombre <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-9">
+															<div class="input-group">
+																<input type="text" class="form-control" placeholder="Buscar concepto" list="listconceptos" id="input-datalist">
+																<datalist id="listconceptos">
+																	<option>SERVICIOS DE DISEÑO GRÁFICO</option>
+																	<option>SERVICIO GERENCIAL PERIODO 03-2023</option>
+																	<option>PAGAR LUZ OFIC. REPUBLICA DE PANANA 3535 501</option>
+																	<option>PRESTAMO PERSONAL</option>
+																</datalist>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											-->
+
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="concepto" class="col-sm-3 col-form-label">Concepto <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-9">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="concepto" name="concepto" id="concepto">
+																	<option value="1">SERVICIOS DE DISEÑO GRÁFICO</option>
+																	<option value="2" selected>SERVICIOS BÁSICOS</option>
+																	<option value="3">INFRAESTRUCTURA Y MAQUINARIA</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+
+
+											<div class="row mb-2">
+												<label for="condes" class="col-sm-3 col-form-label">Descripción <span class="text-danger fw-bold">*</span></label>
+												<div class="col-sm-9">
+													<textarea rows="4" class="form-control" aria-label="Descripción de la empresa" aria-describedby="condes" id="condes" name="condes"   placeholder="Descripción del concepto" autocomplete="off">PAGAR LUZ OFIC. REPUBLICA DE PANANA 3535 501</textarea>
+												</div>
+											</div>
+											
+											<!--
+											<div class="row">
+												<div class="mb-2 col-lg-12">
+													<div class="row">
+														<label for="proveedor" class="col-sm-3 col-form-label">Unidad de medida <span class="text-danger fw-bold">*</span></label>
+														<div class="col-sm-4">
+															<div class="input-group">
+																<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor" disabled>
+																	<option value="1">--</option>
+																	<option value="2" selected>NIU (UNIDAD)</option>
+																	<option value="3">ZZ (SERVICIO)</option>
+																</select>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											-->
+
+											<!--
+											<div class="row mb-2">
+												<label for="cantidad" class="col-sm-3 col-form-label">Cantidad <span class="text-danger fw-bold">*</span></label>
+												<div class="col-sm-4">
+													<input type="number" value="0" step="1" class="form-control" id="cantidad" name="cantidad" autocomplete="off">
+												</div>
+											</div>
+											-->
+											
+											
+
+										</div>
+										<div class="card-footer bg-success">
+										<small class="text-muted"><a href="">Agregar Concepto</a></small></small>
+										</div>
+									</div>
+								</div>
+
+
+								<!-- Acciones -->
+								<div class="col-xl-12">
+									<div class="card h-60 w-100 bg-body-tertiary mt-4">
+										<i class="fa-solid fa-bookmark card-img-top m-1" alt="Datos de la Orden de Compra"></i>
+										<div class="card-body text-center">
+											<button type="button" class="col-xl-12 btn btn-primary w-50 m-1">Guardar</button>
+											<button type="button" class="col-xl-12 btn btn-secondary w-50 m-1" disabled>Aprobar</button>
+											<button type="button" class="col-xl-12 btn btn-success w-50 m-1" disabled>Pagar</button>
+											<button type="button" class="col-xl-12 btn btn-danger w-50 m-1" disabled>Anular</button>
+										</div>
+									</div>
+								</div>
+
 							</div>
 							
 							
 						<!-- Datos de la orden-->
-							<div class="col-xl-5">
+							<div class="col-xl-5 mb-4">
 								<div class="card h-100 w-100 mt-2">
 									<i class="fa-solid fa-file-invoice card-img-top m-1" alt="Datos de la Orden de Compra"></i>
 									<div class="card-body">
@@ -359,24 +465,7 @@
 											</div>
 										</div>
 										-->
-										<div class="row">
-											<div class="mb-2 col-lg-12">
-												<div class="row">
-													<label for="estado" class="col-sm-5 col-form-label">Estado <span class="text-danger fw-bold">*</span></label>
-													<div class="col-sm-7">
-														<div class="input-group">
-															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Estado" name="estado" id="estado">
-																<option value="1">INICIADA</option>
-																<option value="2">CREADA</option>
-																<option value="3">PENDIENTE DE PAGO</option>
-																<option value="4">PAGADA</option>
-																<option value="4">ANULADA</option>
-															</select>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+										
 										<div class="row">
 											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
 												<div class="row">
@@ -406,23 +495,44 @@
 												</div>
 											</div>
 										</div>
-										<div class="row">
-											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
-												<div class="row">
-													<div class="mb-2 col-lg-12">
-														<div class="row">
-															<label for="fecanul" class="col-sm-5 col-form-label">Fecha de anulación</label>
-															<div class="col-sm-7">
-																<input type="date" class="form-control" aria-label="Fecha de vencimiento" aria-describedby="fecanul" id="fecanul" name="fecanul">
-															</div>
-														</div>
-													</div>
-												</div>
+										
+										<div class="row mb-2">
+											<label for="motanu" class="col-sm-5 col-form-label">Observaciones</label>
+											<div class="col-sm-7">
+												<textarea rows="2" class="form-control" aria-label="Observaciones de la Orden" aria-describedby="motanu" id="motanu" name="motanu" autocomplete="off"></textarea>
 											</div>
 										</div>
 
+										
+
 										<hr></hr>
-										<span class="text-muted fst-italic">Abono</span>
+										<span class="text-muted fst-italic"><i class="fa-solid fa-calculator"></i>&nbsp;&nbsp;Cálculo y Abono</span>
+
+
+										<div class="row mb-2">
+											<label for="subtotal" class="col-sm-5 col-form-label">Sub Total <span class="text-danger fw-bold">*</span></label>
+											<div class="col-sm-7 input-group">
+												<span class="input-group-text">S/</span>
+												<input type="number" value="0.00"  step="0.01" class="form-control" id="subtotal" name="subtotal" autocomplete="off">
+											</div>
+										</div>
+										
+										<div class="row mb-2">
+											<label for="igv" class="col-sm-5 col-form-label">IGV <span class="text-danger fw-bold">*</span></label>
+											<div class="col-sm-7 input-group">
+												<span class="input-group-text">S/</span>
+												<input type="number" value="0.00"  step="0.01" class="form-control" id="igv" name="igv" autocomplete="off" disabled>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<label for="total" class="col-sm-5 col-form-label">Total <span class="text-danger fw-bold">*</span></label>
+											<div class="col-sm-7 input-group">
+												<span class="input-group-text">S/</span>
+												<input type="number" value="0.00" step="0.01" class="form-control" id="total" name="total" autocomplete="off">
+											</div>
+										</div>
+
 
 										<div class="row">
 											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
@@ -440,10 +550,18 @@
 										</div>
 
 										<div class="row mb-2">
-											<label for="abono" class="col-sm-5 col-form-label">Monto abonado <span class="text-danger fw-bold">*</span></label>
+											<label for="abono" class="col-sm-5 col-form-label">Monto abonar	 <span class="text-danger fw-bold">*</span></label>
 											<div class="col-sm-5 input-group">
 												<span class="input-group-text">S/</span>
-												<input type="number" value="0.00"  step="0.01" class="form-control" id="abono" name="abono" autocomplete="off">
+												<input type="number" value="0.00" disabled step="0.01" class="form-control" id="abono" name="abono" autocomplete="off">
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<label for="abono" class="col-sm-5 col-form-label">Monto detracción	 <span class="text-danger fw-bold">*</span></label>
+											<div class="col-sm-5 input-group">
+												<span class="input-group-text">S/</span>
+												<input type="number" value="0.00" disabled step="0.01" class="form-control" id="abono" name="abono" autocomplete="off">
 											</div>
 										</div>
 
@@ -464,6 +582,31 @@
 											</div>
 										</div>
 
+										
+										<hr></hr>
+										<span class="text-muted fst-italic"><i class="fa-solid fa-sack-xmark"></i>&nbsp;&nbsp;Anulación</span>
+
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+												<div class="row">
+													<div class="mb-2 col-lg-12">
+														<div class="row">
+															<label for="fecanul" class="col-sm-5 col-form-label">Fecha de anulación</label>
+															<div class="col-sm-7">
+																<input type="date" class="form-control" aria-label="Fecha de vencimiento" aria-describedby="fecanul" id="fecanul" name="fecanul">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row mb-2">
+											<label for="motanu" class="col-sm-5 col-form-label">Motivo de anulación</label>
+											<div class="col-sm-7">
+												<textarea rows="2" class="form-control" aria-label="Observaciones de la Orden" aria-describedby="motanu" id="motanu" name="motanu" autocomplete="off"></textarea>
+											</div>
+										</div>
 										<!--
 										<div class="row">
 											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
@@ -480,6 +623,129 @@
 											</div>
 										</div>
 										-->
+
+										<hr></hr>
+										<span class="text-muted fst-italic"><i class="fa-solid fa-code-fork"></i>&nbsp;&nbsp;Seguimiento</span>
+										
+										<div class="row">
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="estado" class="col-sm-5 col-form-label">Estado <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-7">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" disabled aria-label="Estado" name="estado" id="estado">
+																<option value="1">REGISTRADA</option>
+																<option value="2">APROBADA PARA PAGO</option>
+																<option value="4">PAGADA</option>
+																<option value="5">ANULADA</option>
+																<option value="6">VENCIDA</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="ususol" class="col-sm-5 col-form-label">Usuario solicitador <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-7">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Usuario Solicitador" name="ususol" id="ususol">
+																<option value="1" selected>Walter Felipe (Sistemas)</option>
+																<option value="2">Mario Robles (Sistemas)</option>
+																<option value="4">Badi Castillo (Administración)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="mb-2 col-lg-12">
+												<div class="row">
+													<label for="usuapr" class="col-sm-5 col-form-label">Usuario aprobador <span class="text-danger fw-bold">*</span></label>
+													<div class="col-sm-7">
+														<div class="input-group">
+															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="Usuario Aprobador" name="usuapr" id="usuapr">
+																<option value="1">Walter Felipe (Sistemas)</option>
+																<option value="2">Mario Robles (Sistemas)</option>
+																<option value="4" selected>Badi Castillo (Administración)</option>
+															</select>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+										<hr></hr>
+										<span class="text-muted fst-italic"><i class="fa-solid fa-user-shield"></i>&nbsp;&nbsp;Control</span>
+
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+												<div class="row">
+													<div class="mb-2 col-lg-12">
+														<div class="row">
+															<label for="usucre" class="col-sm-5 col-form-label text-muted">Usuario creador</label>
+															<div class="col-sm-7">
+																<input type="text" value="Iesus Alegre" class="form-control" disabled aria-label="Usuario creador" aria-describedby="usucre" id="usucre" name="usucre">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+												<div class="row">
+													<div class="mb-2 col-lg-12">
+														<div class="row">
+															<label for="feccre" class="col-sm-5 col-form-label text-muted">Fecha de creación</label>
+															<div class="col-sm-7">
+																<input type="date" class="form-control" disabled aria-label="Fecha de creación" aria-describedby="feccre" id="feccre" name="feccre">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+												<div class="row">
+													<div class="mb-2 col-lg-12">
+														<div class="row">
+															<label for="usumod" class="col-sm-5 col-form-label text-muted">Usuario modificador</label>
+															<div class="col-sm-7">
+																<input type="text" value="Mario Robles" class="form-control" disabled aria-label="Usuario modificación" aria-describedby="usumod" id="usumod" name="usumod">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="col-xl-12 col-lg-12 align-self-start mt-1">
+												<div class="row">
+													<div class="mb-2 col-lg-12">
+														<div class="row">
+															<label for="fecmod" class="col-sm-5 col-form-label text-muted">Fecha de última modificación</label>
+															<div class="col-sm-7">
+																<input type="date" class="form-control" disabled aria-label="Fecha de última modificación" aria-describedby="fecmod" id="fecmod" name="fecmod">
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+
+
 									</div>
 									<div class="card-footer bg-success">
 									<small class="text-muted"><a href="">Guíate aquí</a></small></small>
@@ -489,142 +755,6 @@
 
 						
 						
-					</div>
-
-					<div class="row row-cols-1 row-cols-md-2 g-4 mt-1">
-						
-						
-
-						<div class="col-xl-8">
-							<!-- Concepto-->
-							<div class="col-xl-12">
-								<div class="card h-100 w-100">
-									<i class="fa-solid fa-circle-info card-img-top m-1" alt="Datos de la Orden de Compra"></i>
-									<div class="card-body">
-										<h5 class="card-title">Concepto</h5>
-										<p class="card-text">Configura el Concepto de la Orden</p>
-
-										<!-- 
-										<div class="row">
-											<div class="mb-2 col-lg-12">
-												<div class="row form-group">
-													<label for="connom" class="col-sm-3 col-form-label">Nombre <span class="text-danger fw-bold">*</span></label>
-													<div class="col-sm-9">
-														<div class="input-group">
-															<input type="text" class="form-control" placeholder="Buscar concepto" list="listconceptos" id="input-datalist">
-															<datalist id="listconceptos">
-																<option>SERVICIOS DE DISEÑO GRÁFICO</option>
-																<option>SERVICIO GERENCIAL PERIODO 03-2023</option>
-																<option>PAGAR LUZ OFIC. REPUBLICA DE PANANA 3535 501</option>
-																<option>PRESTAMO PERSONAL</option>
-															</datalist>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										-->
-
-										<div class="row">
-											<div class="mb-2 col-lg-12">
-												<div class="row">
-													<label for="concepto" class="col-sm-3 col-form-label">Concepto <span class="text-danger fw-bold">*</span></label>
-													<div class="col-sm-9">
-														<div class="input-group">
-															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="concepto" name="concepto" id="concepto">
-																<option value="1">SERVICIOS DE DISEÑO GRÁFICO</option>
-																<option value="2" selected>SERVICIOS BÁSICOS</option>
-																<option value="3">INFRAESTRUCTURA Y MAQUINARIA</option>
-															</select>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-
-
-
-										<div class="row mb-2">
-											<label for="condes" class="col-sm-3 col-form-label">Descripción detallada</label>
-											<div class="col-sm-9">
-												<textarea rows="2" class="form-control" aria-label="Descripción de la empresa" aria-describedby="condes" id="condes" name="condes"   placeholder="Descripción del concepto" autocomplete="off">PAGAR LUZ OFIC. REPUBLICA DE PANANA 3535 501</textarea>
-											</div>
-										</div>
-										
-										<!--
-										<div class="row">
-											<div class="mb-2 col-lg-12">
-												<div class="row">
-													<label for="proveedor" class="col-sm-3 col-form-label">Unidad de medida <span class="text-danger fw-bold">*</span></label>
-													<div class="col-sm-4">
-														<div class="input-group">
-															<select class="input-group-text text-start form-select d-inline-block text-truncate" aria-label="proveedor" name="proveedor" id="proveedor" disabled>
-																<option value="1">--</option>
-																<option value="2" selected>NIU (UNIDAD)</option>
-																<option value="3">ZZ (SERVICIO)</option>
-															</select>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										-->
-
-										<!--
-										<div class="row mb-2">
-											<label for="cantidad" class="col-sm-3 col-form-label">Cantidad <span class="text-danger fw-bold">*</span></label>
-											<div class="col-sm-4">
-												<input type="number" value="0" step="1" class="form-control" id="cantidad" name="cantidad" autocomplete="off">
-											</div>
-										</div>
-										-->
-										
-										<div class="row mb-2">
-											<label for="subtotal" class="col-sm-3 col-form-label">Sub Total <span class="text-danger fw-bold">*</span></label>
-											<div class="col-sm-9 input-group">
-												<span class="input-group-text">S/</span>
-												<input type="number" value="0.00"  step="0.01" class="form-control" id="subtotal" name="subtotal" autocomplete="off">
-											</div>
-										</div>
-										
-										<div class="row mb-2">
-											<label for="igv" class="col-sm-3 col-form-label">IGV <span class="text-danger fw-bold">*</span></label>
-											<div class="col-sm-9 input-group">
-												<span class="input-group-text">S/</span>
-												<input type="number" value="0.00"  step="0.01" class="form-control" id="igv" name="igv" autocomplete="off" disabled>
-											</div>
-										</div>
-
-										<div class="row mb-2">
-											<label for="total" class="col-sm-3 col-form-label">Total <span class="text-danger fw-bold">*</span></label>
-											<div class="col-sm-9 input-group">
-												<span class="input-group-text">S/</span>
-												<input type="number" value="0.00" step="0.01" class="form-control" id="total" name="total" autocomplete="off">
-											</div>
-										</div>
-
-									</div>
-									<div class="card-footer bg-success">
-									<small class="text-muted"><a href="">Agregar Concepto</a></small></small>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-						<!-- Acciones -->
-						<div class="col-xl-4 mb-4">
-							<div class="card h-60 w-100 bg-body-tertiary">
-								<i class="fa-solid fa-bookmark card-img-top m-1" alt="Datos de la Orden de Compra"></i>
-								<div class="card-body">
-									<h5 class="card-title">Acciones</h5>
-									<div class="text-center"><button type="button" class="col-xl-12 mb-2 btn btn-primary w-50">Guardar</button></div>
-									<div class="text-center"><button type="button" class="col-xl-12 mb-2 btn btn-success w-50">Pagar</button></div>
-									<div class="text-center"><button type="button" class="col-xl-12 mb-2 btn btn-danger w-50">Anular</button></div>
-								</div>
-							</div>
-						</div>
-
 					</div>
 				</div>
 			</form>
